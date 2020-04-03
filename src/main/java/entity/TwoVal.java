@@ -38,4 +38,9 @@ public class TwoVal {
         TwoVal twoValObj = (TwoVal)obj;
         return a == twoValObj.a && b == twoValObj.b;
     }
+
+    @Override
+    public String toString() {
+        return " (@) ";
+    }
 }
