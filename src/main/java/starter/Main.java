@@ -63,30 +63,11 @@ public class Main {
         System.out.println(FullBox.toString());
         System.out.println(EmptyBag.toString());
         Thread.sleep(3000);
-
-
-
-
-
-
-
-
-
-
-
-//        ReadColor readColor = new ReadColor();
-//        int intRGB = readColor.getScreenPixel(981, 9);
-//        int r = (intRGB & 0xff0000) >> 16;
-//        int g = (intRGB & 0xff00) >> 8;
-//        int b = (intRGB & 0xff);
-//        System.out.println(r + " " + g + " " + b);
-
-
-//        for (int i = 0; i < box.size(); i++) {
-//
-//            TwoVal oneBox = box.get(i);
-//            TwoVal oneBag = bag.get(i);
-//            Drag.drag(oneBox.getA(), oneBox.getB(), oneBag.getA(), oneBag.getB());
-//        }
+        int count = EmptyBag.size() < FullBox.size() ? EmptyBag.size() : FullBox.size();
+        for (int i = 0; i < count; i++) {
+            TwoVal twoBox = FullBox.get(i);
+            TwoVal twoBag = EmptyBag.get(i);
+            Drag.drag(twoBox.getA(), twoBox.getB(), twoBag.getA(), twoBag.getB());
+        }
     }
 }
