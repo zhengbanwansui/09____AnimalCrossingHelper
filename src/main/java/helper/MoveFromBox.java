@@ -109,12 +109,12 @@ public class MoveFromBox {
         // 背包向上移动31像素
         Robot robot = new Robot();
         for (TwoVal twoVal : bag) {
-            robot.mouseMove(twoVal.getA(), twoVal.getB() - 71);
-            Thread.sleep(100);
+            robot.mouseMove(twoVal.getA(), twoVal.getB() - 83);
+            //Thread.sleep(500);
             robot.mousePress(BUTTON1_MASK);
             Thread.sleep(100);
             robot.mouseRelease(BUTTON1_MASK);
-            Thread.sleep(100);
+            Thread.sleep(300);
         }
     }
 }
